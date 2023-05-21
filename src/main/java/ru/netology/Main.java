@@ -8,12 +8,11 @@ public class Main {
             int threshold = 20000;
             int balance = 0;
             int vacationMonths = 0;
-            int vacationExpenses = expenses * 3;
             for (int i = 1; i <= 12; i++) {
                 if (balance >= threshold) {
-                    vacationMonths++;
                     balance -= expenses;
-                    balance -= vacationExpenses;
+                    balance /= 3;
+                    vacationMonths++;
                 } else {
                     balance += income;
                     balance -= expenses;
